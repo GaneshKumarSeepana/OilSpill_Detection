@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLOv8 - Detected Oil Spills</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-image: linear-gradient(100deg, #A9A9A9, #696969);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 48px;
+            font-style: italic;
+            font-family: Georgia, serif;
+            text-shadow: -4px 6px 6px rgba(255, 255, 255, 0.3);
+            color: #000000;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .image-gallery img {
+            width: 450px;
+            height: 320px;
+            border: 3px solid #404040;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+            border-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML Structure -->
+    <h1>YOLOv8 - Detected Oil Spills</h1>
+    <div id="image-gallery" class="image-gallery"></div>
+
+    <!-- JavaScript Code -->
+    <script>
+        // Directory where images are stored (relative path)
+        const IMAGE_DIRECTORY = "imagesyolov8"; // Specify the folder containing images
+
+        // Supported image extensions
+        const supportedExtensions = ['png', 'jpg', 'jpeg'];
+
+        // Maximum number of images to check (adjust as needed)
+        const maxImagesToCheck = 50; // For example, checks up to "50" images
+
+        // Function to dynamically load and display images
+        function displayImages() {
+            const imageGallery = document.getElementById("image-gallery");
+
+            for (let i = 1; i <= maxImagesToCheck; i++) {
+                // Loop through potential image names like 1.png, 2.jpg, etc.
+                let foundImage = false;
+                supportedExtensions.forEach(ext => {
+                    if (!foundImage) {
+                        const imageUrl = `${IMAGE_DIRECTORY}/${i}.${ext}`;
+                        // Try loading the image
+                        const img = new Image();
+                        img.src = imageUrl;
+                        img.alt = `Detected Oil Spill Image ${i}`;
+                        img.onload = function () {
+                            imageGallery.appendChild(img);
+                        };
+                        img.onerror = function () {
+                            // Do nothing if the image is not found
+                        };
+                    }
+                });
+            }
+        }
+
+        // Call the function to display images when the page loads
+        window.onload = displayImages;
+    </script>
+</body>
+</html>

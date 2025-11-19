@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detected Anomalies</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+	    background-image: linear-gradient(120deg, #FF7F50, #FFF5EE);
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+	    margin-bottom: 30px;
+	    font-size: 50px;
+	    font-style: italic;
+	    font-family: Georgia, serif;
+	    text-shadow: -7px 7px 7px rgba(255, 95, 31, 0.35);
+            color: #FF4433;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #d9534f;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Detected Anomalies</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>MMSI</th>
+                <th>Date/Time</th>
+                <th>LAT</th>
+                <th>LON</th>
+                <th>SOG</th>
+                <th>COG</th>
+                <th>Heading</th>
+                <th>Vessel Name</th>
+                <th>IMO</th>
+                <th>Call Sign</th>
+                <th>Vessel Type</th>
+                <th>Status</th>
+                <th>Length</th>
+                <th>Width</th>
+                <th>Draft</th>
+                <th>Cargo</th>
+                <th>Anomaly</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data Rows -->
+            <tr>
+    <td>636017984</td>
+    <td>2018-01-01T10:23:44</td>
+    <td>36.64063</td>
+    <td>-75.27049</td>
+    <td>10.3</td>
+    <td>119.7</td>
+    <td>116</td>
+    <td>M/Y.ASASKA</td>
+    <td>NaN</td>
+    <td>ZCYC3</td>
+    <td>0.0</td>
+    <td>0.0</td>
+    <td>23.0</td>
+    <td>3.0</td>
+    <td></td>
+    <td></td>
+    <td>-1</td>
+</tr>
+<tr>
+    <td>367370103</td>
+    <td>2018-01-01T10:24:12</td>
+    <td>29.80514</td>
+    <td>-90.00560</td>
+    <td>15.8</td>
+    <td>202.4</td>
+    <td>511</td>
+    <td>M/Y.ASASKA</td>
+    <td>NaN</td>
+    <td>ZCYC3</td>
+    <td>0.0</td>
+    <td>0.0</td>
+    <td>23.0</td>
+    <td>3.0</td>
+    <td></td>
+    <td></td>
+    <td>-1</td>
+</tr>
+<tr>
+    <td>247376300</td>
+    <td>2018-01-01T10:23:42</td>
+    <td>37.12266</td>
+    <td>-74.80039</td>
+    <td>14.4</td>
+    <td>185.6</td>
+    <td>186</td>
+    <td>COLUMBIA</td>
+    <td>NaN</td>
+    <td>ZCYC3</td>
+    <td>0.0</td>
+    <td>0.0</td>
+    <td>23.0</td>
+    <td>3.0</td>
+    <td></td>
+    <td></td>
+    <td>-1</td>
+</tr>
+<tr>
+    <td>371639000</td>
+    <td>2018-01-01T10:24:19</td>
+    <td>29.45143</td>
+    <td>-94.84437</td>
+    <td>12.2</td>
+    <td>334.1</td>
+    <td>338</td>
+    <td>M/Y.ASASKA</td>
+    <td>NaN</td>
+    <td>ZCYC3</td>
+    <td>0.0</td>
+    <td>0.0</td>
+    <td>23.0</td>
+    <td>3.0</td>
+    <td></td>
+    <td></td>
+    <td>-1</td>
+</tr>
+<tr>
+    <td>367615820</td>
+    <td>2018-01-01T10:24:49</td>
+    <td>46.20580</td>
+    <td>-123.38677</td>
+    <td>0.0</td>
+    <td>0.0</td>
+    <td>511</td>
+    <td>COLUMBIAM</td>
+    <td>NaN</td>
+    <td>ZCYC3</td>
+    <td>0.0</td>
+    <td>0.0</td>
+    <td>23.0</td>
+    <td>3.0</td>
+    <td></td>
+    <td></td>
+    <td>-1</td>
+</tr>
+<tr>
+    <td>338117119</td>
+    <td>2018-01-01T10:24:40</td>
+    <td>59.60473</td>
+    <td>-151.42030</td>
+    <td>0.0</td>
+    <td>250.1</td>
+    <td>511</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0.0</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>-1</td>
+</tr>
+<tr>
+    <td>367072780</td>
+    <td>2018-01-01T10:24:38</td>
+    <td>42.28083</td>
+    <td>-83.12682</td>
+    <td>0.0</td>
+    <td>0.0</td>
+    <td>511</td>
+    <td>M/Y.ASASKA</td>
+    <td>NaN</td>
+    <td>ZCYC3</td>
+    <td>0.0</td>
+    <td>0.0</td>
+    <td>23.0</td>
+    <td>3.0</td>
+    <td></td>
+    <td></td>
+    <td>-1</td>
+</tr>
+<tr>
+    <td>319001600</td>
+    <td>2018-01-01T08:07:44</td>
+    <td>25.69051</td>
+    <td>-80.26084</td>
+    <td>0.1</td>
+    <td>31.4</td>
+    <td>511</td>
+    <td>M/Y.ASASKA</td>
+    <td>NaN</td>
+    <td>ZCYB6</td>
+    <td>0.0</td>
+    <td>5.0</td>
+    <td>34.0</td>
+    <td>7.0</td>
+    <td>0.0</td>
+    <td></td>
+    <td>-1</td>
+</tr>
+<tr>
+    <td>319001600</td>
+    <td>2018-01-01T08:10:41</td>
+    <td>25.69051</td>
+    <td>-80.26085</td>
+    <td>0.0</td>
+    <td>16.3</td>
+    <td>511</td>
+    <td>M/Y.ASASKA</td>
+    <td>NaN</td>
+    <td>ZCYB6</td>
+    <td>0.0</td>
+    <td>5.0</td>
+    <td>34.0</td>
+    <td>7.0</td>
+    <td>0.0</td>
+    <td></td>
+    <td>-1</td>
+</tr>
+<tr>
+    <td>319001600</td>
+    <td>2018-01-01T08:16:37</td>
+    <td>25.69051</td>
+    <td>-80.26082</td>
+    <td>0.0</td>
+    <td>13.9</td>
+    <td>511</td>
+    <td>M/Y.ASASKA</td>
+    <td>NaN</td>
+    <td>ZCYB6</td>
+    <td>0.0</td>
+    <td>5.0</td>
+    <td>34.0</td>
+    <td>7.0</td>
+    <td>0.0</td>
+    <td></td>
+    <td>-1</td>
+</tr>
+<tr>
+    <td>319001600</td>
+    <td>2018-01-01T08:19:36</td>
+    <td>25.69054</td>
+    <td>-80.26082</td>
+    <td>0.0</td>
+    <td>10.9</td>
+    <td>511</td>
+    <td>M/Y.ASASKA</td>
+    <td>NaN</td>
+    <td>ZCYB6</td>
+    <td>0.0</td>
+    <td>5.0</td>
+    <td>34.0</td>
+    <td>7.0</td>
+    <td>0.0</td>
+    <td></td>
+    <td>-1</td>
+</tr>
+<tr>
+                <td>355236000</td>
+                <td>2018-01-01T10:24:25</td>
+                <td>24.14326</td>
+                <td>-80.69069</td>
+                <td>9.9</td>
+                <td>238.2</td>
+                <td>238</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>0.0</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>-1</td>
+            </tr>
+            <tr>
+                <td>367513150</td>
+                <td>2018-01-01T15:09:49</td>
+                <td>45.64611</td>
+                <td>-122.75403</td>
+                <td>6.7</td>
+                <td>330.7</td>
+                <td>511</td>
+                <td>COLUMBIA</td>
+                <td>IMO7042899</td>
+                <td>WDG2197</td>
+                <td>31.0</td>
+                <td>0.0</td>
+                <td>28.0</td>
+                <td>8.0</td>
+                <td>3.0</td>
+                <td>52.0</td>
+                <td>-1</td>
+            </tr>
+            <tr>
+                <td>367513150</td>
+                <td>2018-01-01T15:08:41</td>
+                <td>45.64421</td>
+                <td>-122.75270</td>
+                <td>5.6</td>
+                <td>343.2</td>
+                <td>511</td>
+                <td>COLUMBIA</td>
+                <td>IMO7042899</td>
+                <td>WDG2197</td>
+                <td>31.0</td>
+                <td>0.0</td>
+                <td>28.0</td>
+                <td>8.0</td>
+                <td>3.0</td>
+                <td>52.0</td>
+                <td>-1</td>
+            </tr>
+            <tr>
+                <td>367513150</td>
+                <td>2018-01-01T15:10:56</td>
+                <td>45.64811</td>
+                <td>-122.75548</td>
+                <td>6.9</td>
+                <td>342.8</td>
+                <td>511</td>
+                <td>COLUMBIA</td>
+                <td>IMO7042899</td>
+                <td>WDG2197</td>
+                <td>31.0</td>
+                <td>0.0</td>
+                <td>28.0</td>
+                <td>8.0</td>
+                <td>3.0</td>
+                <td>52.0</td>
+                <td>-1</td>
+            </tr>
+            <tr>
+                <td>367513150</td>
+                <td>2018-01-01T15:11:58</td>
+                <td>45.64988</td>
+                <td>-122.75673</td>
+                <td>7.3</td>
+                <td>322.4</td>
+                <td>511</td>
+                <td>COLUMBIA</td>
+                <td>IMO7042899</td>
+                <td>WDG2197</td>
+                <td>31.0</td>
+                <td>0.0</td>
+                <td>28.0</td>
+                <td>8.0</td>
+                <td>3.0</td>
+                <td>52.0</td>
+                <td>-1</td>
+            </tr>
+            <tr>
+                <td>319001600</td>
+                <td>2018-01-01T09:27:50</td>
+                <td>25.69053</td>
+                <td>-80.26082</td>
+                <td>0.1</td>
+                <td>80.4</td>
+                <td>511</td>
+                <td>M/Y.ASASKA</td>
+                <td>NaN</td>
+                <td>ZCYB6</td>
+                <td>0.0</td>
+                <td>5.0</td>
+                <td>34.0</td>
+                <td>7.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>-1</td>
+            </tr>
+            <tr>
+                <td>319001600</td>
+                <td>2018-01-01T09:30:47</td>
+                <td>25.69053</td>
+                <td>-80.26083</td>
+                <td>0.2</td>
+                <td>73.4</td>
+                <td>511</td>
+                <td>M/Y.ASASKA</td>
+                <td>NaN</td>
+                <td>ZCYB6</td>
+                <td>0.0</td>
+                <td>5.0</td>
+                <td>34.0</td>
+                <td>7.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>-1</td>
+            </tr>
+            <tr>
+                <td>319001600</td>
+                <td>2018-01-01T09:33:45</td>
+                <td>25.69052</td>
+                <td>-80.26079</td>
+                <td>0.1</td>
+                <td>72.9</td>
+                <td>511</td>
+                <td>M/Y.ASASKA</td>
+                <td>NaN</td>
+                <td>ZCYB6</td>
+                <td>0.0</td>
+                <td>5.0</td>
+                <td>34.0</td>
+                <td>7.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>-1</td>
+            </tr>
+
+            <!-- Continue adding other rows based on the detected anomalies -->
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detected Oil Spills</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-image: linear-gradient(120deg, #00308F, #7CB9E8);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 50px;
+            font-style: italic;
+            font-family: Georgia, serif;
+            text-shadow: -5px 7px 7px rgba(124, 185, 232, 0.35);
+            color: #002D62;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .image-gallery img {
+            width: 500px;
+            height: 300px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s; /* Transition for smooth effect */
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05); /* Slightly increase size */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML Structure -->
+    <h1>Detected Oil Spills</h1>
+    <div id="image-gallery" class="image-gallery"></div>
+
+    <!-- JavaScript Code -->
+    <script>
+        // Directory where images are stored (relative path)
+        const IMAGE_DIRECTORY = "images"; // Assuming images are in the 'images' folder
+
+        // Function to load and display images dynamically
+        function displayImages() {
+            const imageGallery = document.getElementById("image-gallery");
+
+            // Assume a maximum number of images to display (e.g., 12 images)
+            const maxImages = 12;
+
+            // Iterate and add images with the filenames 1.png, 2.png, ..., maxImages.png
+            for (let i = 1; i <= maxImages; i++) {
+                // Create an image element
+                const image = document.createElement("img");
+                image.src = `${IMAGE_DIRECTORY}/${i}.png`; // Image names like '1.png', '2.png', etc.
+                image.alt = `Oil Spill Image ${i}`;
+
+                // Append image to gallery
+                imageGallery.appendChild(image);
+            }
+        }
+
+        // Call the function to display images when the page loads
+        window.onload = displayImages;
+    </script>
+</body>
+</html>
