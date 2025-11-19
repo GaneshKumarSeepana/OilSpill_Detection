@@ -106,24 +106,7 @@ Inference output images saved in <code>imagesyolov8/</code> → script auto-load
 
 Everything loads offline.
 
-<hr>
 
-<h2>📌 Deployment</h2>
-
-<ol>
-  <li>Go to <b>Settings → Pages</b></li>
-  <li>Choose <b>Deploy from Branch</b></li>
-  <li>Select <b>main</b> and <b>/(root)</b></li>
-  <li>Save & wait for deployment</li>
-</ol>
-
-<p>Your site will appear at:</p>
-
-<pre>https://ganeshkumarseepana.github.io/OilSpill_Detection/</pre>
-
-<hr>
-
-<h2>🙌 Author</h2>
 
 <p>
 <b>Ganesh Kumar S</b><br>
